@@ -1,9 +1,15 @@
 from openai import OpenAI
-client = OpenAI(api_key='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')
+import requests
+import asyncio
+import time
 
-response = client.responses.create(
-    model="gpt-4.1",
-    input="Write a one-sentence bedtime story about a unicorn."
-)
+def getHTML(url):
+    print('marker 1')
+    start_time = time.time()
+    resp = requests.get(url)
+    end_time = time.time()
 
-print(response.output_text)
+    print(f'The elapsed time is {end_time-start_time} ms.')
+    print('marker 2')
+    
+getHTML('https://solve.mit.edu/solutions/9147')

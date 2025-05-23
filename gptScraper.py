@@ -6,12 +6,13 @@ from openai import OpenAI
 import pandas as pd
 from tqdm import tqdm
 from dotenv import load_dotenv
+import asyncio
 
 load_dotenv()
 
 # Configs
 API_KEY = os.getenv('OPENAI_API_KEY')
-MODEL = 'gpt-4o'  # gpt-4o is accurate and cost-effective
+MODEL = 'gpt-4o-mini'  # gpt-4o is accurate and cost-effective
 CSV_FILE = 'mit_solve_circular_economy_2019_solutions.csv'
 OUTPUT_FILE = 'mit_solve_2019_circular_economy_solutions.json'
 ERROR_LOG = 'scrape_errors.log'
@@ -48,22 +49,17 @@ def log_error(msg):
         f.write(msg + '\n')
 
 def get_html(url):
-    headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; DataExtractionBot/1.0)"
-    }
-    resp = requests.get(url, headers=headers, timeout=30)
+    resp = requests.get(url)
     resp.raise_for_status()
     return resp.text
 
 def extract_json_from_html(html):
-    prompt = PROMPT_TEMPLATE.format(html=html[:15000])  # API has context limits; truncate if very long
+    prompt = PROMPT_TEMPLATE.format(html=html)
     response = client.responses.create(
         model=MODEL,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.0,
-        max_tokens=2048  # Should be enough for most solutions
+        input = prompt        
     )
-    content = response.choices[0].message['content']
+    content = response.output_text
     # Extract JSON (allow for whitespace)
     try:
         # Sometimes the API returns extra text, try to extract just the JSON
