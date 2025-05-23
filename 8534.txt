@@ -1,0 +1,437 @@
+<main class="flex flex-col flex-auto">
+<section class="bg-black text-white py-20">
+<div class="container">
+<div class="flex flex-col gap-x-16 md:flex-row lg:gap-x-24">
+<div class="relative flex flex-col items-start">
+<div class="btn btn--primary px-10 mb-5 cursor-auto">Selected</div>
+<div class="relative -top-2 font-semibold uppercase hidden md:block mt-auto">
+<span>Last Updated June 7, 2019</span>
+</div>
+</div>
+<div class="relative flex-1 flex flex-col">
+<div class="text-20 font-bold uppercase mb-4">Circular Economy</div>
+<h1 class="heading-2">Creating Circular Solutions</h1>
+<h2 class="text-20 mt-4">Reselling used textiles for a zero-waste system</h2>
+<div class="mt-12">
+<div class="font-bold uppercase">Team Leader</div>
+<div class="text-28">Nicole Bassett</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20">
+<div class="container">
+<div ax-load="" class="flex flex-col gap-8 md:flex-row lg:gap-16" x-data="tabs('tab')" x-id="['tablist', 'tabpanels']" x-ignore="">
+<div class="frontend-form md:hidden">
+<select x-model="selectedTab">
+<template hidden="" x-for="(tab, index) in tabs">
+<option x-bind:value="tab.id" x-text="tab.label"></option>
+</template>
+</select>
+</div>
+<div class="flex-1 md:order-last" x-bind:id="$id('tabpanels')">
+<div role="tabpanel" style="display:none;" x-bind:aria-labelledby="`tab-${id}`" x-bind:id="`tabpanel-${id}`" x-data="{
+        id: 'spotlight',
+        label: 'Spotlight',
+    }" x-init="tabs.push($data)" x-show="isSelected(id)">
+<div class="solution-spotlight-wysiwyg">
+<h2>Solution Pitch</h2>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/2yP2f68K2F8" width="560"></iframe></p>
+<h2>The Problem</h2>
+<p>Apparel brands can only generate new revenue by making and selling more goods, and manufacturing consistently results in waste when a garment’s life cycle is linear: sold once, used, and then discarded. In addition to generating industrial and landfill pollution and financial waste, that process also depletes raw material resources. </p>
+<h2>The Solution</h2>
+<p>The Renewal Workshop provides zero-waste, circular solutions for progressive apparel and textile brands through a software platform and garment processing and repair facility. The system tracks data on existing products, offering comprehensive insights on a product’s lifetime value and impacts on the environment and company finances. </p>
+<p>Brand partners can sell products certified for reuse and extend their usefulness, while items that cannot be resold become recycling feedstock within the system. Since its founding, the Renewal Workshop has accrued 20 brand partners and saved nearly 110,000 pounds of textiles from landfills.</p>
+<h2>Market Opportunity</h2>
+<p>The global textile industry is currently valued at <a href="https://www.grandviewresearch.com/industry-analysis/textile-market" target="_blank">over $925 billion</a>, and the Renewal Workshop could expand into additional industries such as footwear, which has a growing <a href="https://www.globenewswire.com/news-release/2019/07/10/1880799/0/en/By-2023-Global-Footwear-Market-Share-Hits-Record-Value-of-US-320-44-Billion-Zion-Market-Research.html" target="_blank">market size of $250 billion</a>. The secondhand market will reach <a href="https://www.thredup.com/resale" target="_blank">$51 billion in the next five years</a> with 56 million women in the US buying secondhand. Only <a href="https://www.bankvogue.com/textile-recycling-101-need-know-divert-material-landfills/" target="_blank">15 percent of textiles</a> are recycled, even though nearly 100 percent of textiles and clothing are recyclable. </p>
+<h2>Partnership Goals</h2>
+<p><strong></strong></p>
+<p>The Renewal Workshop currently seeks:</p>
+<ul><li>Advice on increasing the organization’s positive impact and growth to new markets;</li><li>Exposure and more publicity to sign on new brands and companies in Europe; and</li><li>Guidance on establishing itself as a leader in the apparel and home goods markets.</li></ul>
+<h2>Organization Highlights</h2>
+<p>Some of The Renewal Workshop’s notable achievements include: </p>
+<ul><li>Media coverage in <a href="https://www.voguebusiness.com/technology/circular-id-eon-sustainability-blockchain" target="_blank">Vogue</a>, <a href="https://www.outsideonline.com/2380476/renewal-workshop-used-gear" target="_blank">Outside Magazine</a>, and <a href="https://www.greenbiz.com/article/4-companies-pioneering-clothing-recommerce-market" target="_blank">GreenBiz</a>; and </li><li>Speaking roles at industry conferences, such as the <a href="https://www.youtube.com/watch?v=dGiPYzF7ze0" target="_blank">Zero Waste Conference</a>. </li></ul>
+<h2>Existing Partnerships</h2>
+<p>The Renewal Workshop currently partners with 20 of the most progressive fashion and home goods companies, including The North Face, Eagle Creek, Coyuchi, prAna, Timbuk2, Toad &amp; CO, Mara Hoffman, Pearl Izumi, and more. </p>
+</div>
+</div>
+<div role="tabpanel" style="display:none;" x-bind:aria-labelledby="`tab-${id}`" x-bind:id="`tabpanel-${id}`" x-data="{
+        id: 'solution',
+        label: 'Solution',
+    }" x-init="tabs.push($data)" x-show="isSelected(id)">
+<div>
+<div class="group border-b last:border-none" x-cloak="" x-data="{expanded: true}">
+<div class="flex items-center justify-between py-4 group-first:pt-0 cursor-pointer" x-on:click="expanded = !expanded">
+<div class="text-24 lg:text-32 font-serif">Solution overview</div>
+<div>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" x-show="!expanded" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> <svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" x-show="expanded" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12h14" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> </div>
+</div>
+<div class="space-y-8 pb-8" style="display:none;" x-collapse="" x-show="expanded">
+<div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Our Solution</div>
+<div class="text-18 lg:text-20">
+<div>Creating Circular Solutions</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Tagline</div>
+<div class="text-18 lg:text-20">
+<div>The Renewal Workshop is the leading provider of circular solutions for apparel and textile brands. </div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Pitch us on your solution</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>The apparel and textile industry is a linear business model. Goods are manufactured from raw materials, sold, used, and then discarded as waste. This has had a negative impact on the planet through natural resource degradation, pollution and exacerbating poverty. The Renewal Workshop is committed to solving this problem by providing circular solutions for apparel and textile brands.
+</p>
+<p>We offer Apparel and Textile Renewal, Sales Channel Management for Renewed Products, Circular Mapping, Data Collection and Textile Recycling R&amp;D. Our proprietary Renewal System takes damaged apparel and textiles and turns them into Renewed Products, upcycled materials or recycling feedstock.
+</p>
+<p>The Renewal Workshop operates a zero waste circular system, that recovers the full value out of products already created, as a way of serving customers, partners, and planet. At scale, our work will revolutionize the way clothing is made, used, sold, resold and recycled, by providing the business model solution.</p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Film your elevator pitch</div>
+<div class="text-18 lg:text-20">
+<div class="w-full aspect-video mt-5">
+<iframe allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" class="size-full" frameborder="0" src="https://player.vimeo.com/video/340943616"></iframe>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">What is the problem you are solving?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>The apparel and textile industry is a linear business model, in which goods are manufactured from raw materials, sold, used and then discarded as waste. This has a negative impact on the planet through natural resource degradation, pollution and exacerbating poverty. The Renewal Workshop is committed to solving this problem by providing circular solutions for apparel and textile brands.</p>
+<p>The entire apparel and textile industry operates under the same growth strategy - making and selling more things increases revenue. Our solution is to provide a different path to economic growth through new circular business models. </p>
+<p>We have started with 20 brand partners, including prAna, Toad&amp;Co, Coyuchi, Mara Hoffman, and The North Face.</p>
+<p>As of December of 2018 we have saved:</p>
+<p>• 109,693 pounds of textiles from landfill</p>
+<p>• The equivalent energy of 17,009 light bulbs for a year</p>
+<p>• The equivalent carbon of 15,412 gallons of gas</p>
+<p>• The equivalent water of 128 olympic sized swimming pools</p>
+<p>• 173,176 pounds of toxic chemicals</p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Who are you serving?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>The main population TRW aims to serve are apparel and textile brands, and then by extension their customers.</p>
+<p>By changing the entity that is at the root cause of the problem, as well as who holds the most power in their actions, it is feasible to change the industry. The goal is to demonstrate that there is financial value to be had by operating a circular business that uses resources wisely and does not create waste. Some brands have already seen the economic benefit through their partnership with The Renewal Workshop. Our ability to scale and to partner with key influencer brands is what will drive significant change. </p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">What is your solution?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>The Renewal System is the proprietary process we developed to bridge gaps, connect systems, and mobilize leadership to transform the existing linear manufacturing practices into a circular one. At its heart, it is a collaborative process that relies on progressive brand partners committed to sustainability.</p>
+<p>Brands and retailers lack systems to maximize the full value of a product over its whole lifetime. This means the creative, physical, natural and financial resources that have been invested in products are lost, when value still exists. This leads to massive waste problems with negative environmental impacts and significant financial losses.</p>
+<p>The Renewal System maximizes the lifetime value of every product created. It takes apparel and textiles and turns them into Renewed apparel, upcycling materials or recycled fiber. Data is tracked on everything that flows through the system, offering comprehensive insights never before available on a product’s’ lifetime value and impact. </p>
+<p>Products that are identified as able to be resold are put into the circular economy through various sales channels that the brand partners market to. This extends the life of products that otherwise were deemed unsellable.</p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Select only the most relevant.</div>
+<div class="text-18 lg:text-20">
+<ul class="list-disc ml-6">
+<li>Demonstrate business models for extending the lifetime of products</li>
+</ul>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Where is your solution team headquartered?</div>
+<div class="text-18 lg:text-20">
+<div>Cascade Locks, OR, USA</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Our solution's stage of development:</div>
+<div class="text-18 lg:text-20">
+<ul class="list-disc ml-6">
+<li>Growth</li>
+</ul>
+</div>
+</div>
+</div>
+</div> <div class="group border-b last:border-none" x-cloak="" x-data="{expanded: false}">
+<div class="flex items-center justify-between py-4 group-first:pt-0 cursor-pointer" x-on:click="expanded = !expanded">
+<div class="text-24 lg:text-32 font-serif">More about your solution</div>
+<div>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" x-show="!expanded" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> <svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" x-show="expanded" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12h14" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> </div>
+</div>
+<div class="space-y-8 pb-8" style="display:none;" x-collapse="" x-show="expanded">
+<div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Select one of the below:</div>
+<div class="text-18 lg:text-20">
+<ul class="list-disc ml-6">
+<li>New business model or process</li>
+</ul>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Describe what makes your solution innovative.</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>The Renewal Workshop leads the way for apparel and textile brands to change the way they do business.  It’s a new way of doing business that is regenerative with every action that takes place in the design, creation, sales, use and management of a product’s next life, all the way through recycling.</p>
+<p>In only 3 years, The Renewal Workshop has diverted over 100,000 pounds of apparel from landfill into the circular economy, generating financial value for its brand partners. </p>
+<p>The Renewal Workshop as a service provider brings all of the tools and resources required to become circular for the brands to then implement. Brands now have the ability to generate new revenue without having to make new product. 
+</p>
+<p>This new model changes the industry, providing a vision for a new way of doing business that will continue to unlock new innovations towards zero waste and added product value. </p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Describe the core technology that your solution utilizes.</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>The Renewal Workshop is a technology enabled company. We use technology to manage our operations for ourselves and our brand partners. Our technology is a customized product development and enterprise management system for a circular business. Not only are the practices of traditional business linear, so is the software running those businesses. Therefore, The Renewal Workshop had to map out and develop circular software, so that products could transform in a circular change instead of a linear one.</p>
+<p>The Renewal Workshop also integrates environmental impact collection and analysis into the software and operations of our business. Through integrated Lifecycle Analysis on materials, we are able to produce reports that demonstrate the environmental savings through product life extension. </p>
+<p>Finally, we use a unique waterless washing machine to clean many of the garments that move through the Renewal System. The deployment of a liquid C02 washing machine allows for clothing to be cleaned without the use of water, as well as capture of all washing waste; therefore not releasing microplastics into the water systems.</p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Please select the technologies currently used in your solution:</div>
+<div class="text-18 lg:text-20">
+<ul class="list-disc ml-6">
+<li>Big Data</li>
+</ul>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Why do you expect your solution to address the problem?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>At our inception, The Renewal Workshop identified the root cause of the consumption problem in the apparel and textile industry, and built a solution to not only address that root cause, but to build the framework for change to occur.</p>
+<p>In order for an apparel business to change their business model they need to have a reason to change. The Renewal Workshop began by building a factory that took in apparel waste from brands, then built the system and processes to renew the product, and created a sales platform to sell Renewed apparel - showing brands the value that remained in the items they were previously throwing away.</p>
+<p>Once a small group of sustainability minded brands became partners, we were able to demonstrate not only a customer market, but a business case for a new business model for these brands. The new business model simultaneously showed an environmental savings along with a financial revenue stream. That business case then sparked further momentum for large companies who have been more traditional in their business strategy to take a look at becoming Circular. This has sparked the swell of companies adopting Circular Strategies, and allocating staff and resources towards developing out the new business models.</p>
+<p>The Renewal Workshop remains to be the only provider of circular expertise with operations. We see this positioning as our strength to catalyze further links into creating a systemic change in our industry.</p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">In which countries do you currently operate?</div>
+<div class="text-18 lg:text-20">
+<ul class="list-disc ml-6">
+<li>United States</li><li>Netherlands</li>
+</ul>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">In which countries will you be operating within the next year?</div>
+<div class="text-18 lg:text-20">
+<ul class="list-disc ml-6">
+<li>United States</li><li>Netherlands</li>
+</ul>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">How many people are you currently serving with your solution? How many will you be serving in one year? How about in five years?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>The Renewal Workshop is currently serving 20 apparel brands, the total number of employees at these brands is over 3,000.  In one year, we expect to triple this number, and in 5 years well over 10,000 employees will be affected by our partnerships.</p>
+<p>The Renewal Workshop offers an industry solution, one that as implemented has sparked significant changes in how companies design, create, sell and use their products. </p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">What are your goals within the next year and within the next five years?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>Our goal for the next year is to expand The Renewal Workshop services into a new market, by offering Renewed products in Europe. This will bring the opportunity to work directly with European based apparel brands to both reduce their overall apparel waste footprint, as well as offer Renewed products to all of their customers.</p>
+<p>Within the next 5 years the goal of The Renewal Workshop is to partner with half of the apparel industry by revenue, and start them on their journey from current business models of "take, make, and waste", to a circular, no waste model. The impact of shifting the industry to a resource positive strategy, while ensuring financial growth, will reduce the carbon, energy, toxicity and water consumption of the industry by a third. Our Renewal facilities will be located in every major market serving the local markets with Renewed products, and ensuring that brands are meeting their circular targets. </p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">What are the barriers that currently exist for you to accomplish your goals for the next year and for the next five years?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>The biggest barrier we face is the apparel brand industry mindset of a linear economy -  making and selling only new products. We are trying to evolve this industry linear mindset to a circular mindset, which requires a cultural mindset shift.  In order to influence this shift, we have to show brands that there is financial viability in doing business differently.</p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">How are you planning to overcome these barriers?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>Two big factors will influence the cultural mindset shift of the current apparel industry business model.</p>
+<p>1) Education - continuing to educate both brands and consumers of the current apparel waste problems, as well as education around new business models for sustainability and product life extension, including the benefits of Renewed apparel.</p>
+<p>2) Proving the financial benefits of a circular business model for Renewed products. The goal to accomplish this is to assist our current brand partners to be as successful as possible with their own movement towards circular business models. The more we can show that there is financial viability in cost savings of selling products that have already been created (vs creating new), as well as an entirely new revenue stream by selling Renewed products, will help influence brands into moving away from strictly linear business models. </p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">If your solution has a website, provide a link here:</div>
+<div class="text-18 lg:text-20">
+<div>https://renewalworkshop.com/</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">If you have additional video, provide a YouTube or Vimeo link to your video here:</div>
+<div class="text-18 lg:text-20">
+<div class="w-full aspect-video mt-5">
+<iframe allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" class="size-full" frameborder="0" src="https://www.youtube.com/embed/bw5HLqueySI"></iframe>
+</div>
+</div>
+</div>
+</div>
+</div> <div class="group border-b last:border-none" x-cloak="" x-data="{expanded: false}">
+<div class="flex items-center justify-between py-4 group-first:pt-0 cursor-pointer" x-on:click="expanded = !expanded">
+<div class="text-24 lg:text-32 font-serif">About your team</div>
+<div>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" x-show="!expanded" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> <svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" x-show="expanded" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12h14" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> </div>
+</div>
+<div class="space-y-8 pb-8" style="display:none;" x-collapse="" x-show="expanded">
+<div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Select an option below:</div>
+<div class="text-18 lg:text-20">
+<ul class="list-disc ml-6">
+<li>For-Profit</li>
+</ul>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">How many people work on your solution team?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>As of May 2019, we employ 22 full time employees and 3 contractors. </p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">For how many years have you been working on your solution?</div>
+<div class="text-18 lg:text-20">
+<div>The company started in December 2015.</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Why are you and your team best-placed to deliver this solution?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>The Renewal Workshop team is comprised of apparel industry veterans.  Co Founder Nicole Bassett has been a leader in Sustainability, Manufacturing &amp; Business Strategy since 2004. After completion of her Master’s thesis, Nicole joined Patagonia where she managed social responsibility, revamping Patagonia’s program to be one of the leaders in the apparel industry. She was then recruited to prAna, to create a formal sustainability program for its products and supply chain. She lead Fair Trade USA’s pilot project within prAna, to bring one of the first ever Fair Trade Certified apparel products to market.</p>
+<p>Co Founder Jeff Denby’s passion lies with transforming global apparel production from an opaque system of social and environmental exploitation, to a transparent sustainable system. Jeff began his career managing the design and branding of products from forks to furniture, assisting overseas factories with product manufacturing.<br/>In 2009, after graduating with an MBA from the Haas School of Business at the University of California, Berkeley, Jeff co-founded PACT, an award-winning organic apparel basics brand with retail partners such as Whole Foods and Amazon, as well as a successful e-commerce site. In 2014, he launched the largest collection of Fair Trade Certified apparel in the US.</p>
+<p>The TRW operations team have set up and run factories, literally written the book on quality in the industry, and lead the development of enterprise business systems. TRW has lead the way in educating individuals and businesses on what is Circular and how they can capitalize on this new emerging business model.  </p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">With what organizations are you currently partnering, if any? How are you working with them?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>The brands that The Renewal Workshop currently partners with are the ones who can make and influence the most substantial changes in the industry. We work with some of the most progressive fashion and homes goods companies such as:</p>
+<p>- The North Face</p>
+<p>- Eagle Creek</p>
+<p>- Coyuchi</p>
+<p>- prAna</p>
+<p>- Timbuk2</p>
+<p>- Toad &amp; CO</p>
+<p>- Mara Hoffman</p>
+<p>- Vuori</p>
+<p>- Pearl Izumi</p>
+<p>- Icebreaker</p>
+<p>- Lo &amp; Sons</p>
+<p>- Outerknown</p>
+<p>- Nau</p>
+<p>- Myles Apparel</p>
+<p>- Indegenious</p>
+<p>- First Mile</p>
+</div>
+</div>
+</div>
+</div>
+</div> <div class="group border-b last:border-none" x-cloak="" x-data="{expanded: false}">
+<div class="flex items-center justify-between py-4 group-first:pt-0 cursor-pointer" x-on:click="expanded = !expanded">
+<div class="text-24 lg:text-32 font-serif">Your business model &amp; funding</div>
+<div>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" x-show="!expanded" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> <svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" x-show="expanded" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12h14" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> </div>
+</div>
+<div class="space-y-8 pb-8" style="display:none;" x-collapse="" x-show="expanded">
+<div>
+<div class="text-20 lg:text-24 font-semibold mb-2">What is your business model?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>We are an industry leading service provider and a movement maker, galvanizing a community of people around Circular as a way of life.</p>
+<p>Our partner brands become part of The Renewal Workshop community to solve circular solutions together. Each brand pays a partnership fee to be a part of The Renewal Workshop community. This fee includes management of the brand’s unwanted products, the Renewal of those products, the marketing and sales of the Renewed products on our website, as well as the sales transaction and data collection. Additional revenue is generated for both the brand partner, and The Renewal workshop through the sale of the Renewed products.</p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">What is your path to financial sustainability?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>We've received investment capital in order to get the company running, and to prove this circular business model.  Long term revenue and financial sustainability comes through our brand partnership fees and through the sales of products and services. </p>
+</div>
+</div>
+</div>
+</div>
+</div> <div class="group border-b last:border-none" x-cloak="" x-data="{expanded: false}">
+<div class="flex items-center justify-between py-4 group-first:pt-0 cursor-pointer" x-on:click="expanded = !expanded">
+<div class="text-24 lg:text-32 font-serif">Partnership potential</div>
+<div>
+<svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" x-show="!expanded" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 4.5v15m7.5-7.5h-15" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> <svg aria-hidden="true" class="size-6" data-slot="icon" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24" x-show="expanded" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 12h14" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> </div>
+</div>
+<div class="space-y-8 pb-8" style="display:none;" x-collapse="" x-show="expanded">
+<div>
+<div class="text-20 lg:text-24 font-semibold mb-2">Why are you applying to Solve?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>If we were to with the Solve challenge, this grant funding would specifically be used towards research for textile recycling.  We currently have a potential recycling pilot ready to be put in motion.  This $10,000 from the grant funding would allow us to be able to take the pilot from an idea to execution.</p>
+<p>The non-monetary benefit we would love to work with Solve on, is being a part of, helping build, and broadening our connections within the community of other circular businesses.</p>
+</div>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">What types of connections and partnerships would be most catalytic for your solution?</div>
+<div class="text-18 lg:text-20">
+<ul class="list-disc ml-6">
+<li>Business model</li><li>Technology</li><li>Funding and revenue model</li><li>Media and speaking opportunities</li>
+</ul>
+</div>
+</div> <div>
+<div class="text-20 lg:text-24 font-semibold mb-2">With what organizations would you like to partner, and how would you like to partner with them?</div>
+<div class="text-18 lg:text-20">
+<div class="answer-wysiwyg">
+<p>We would ultimately like to partner with any and all apparel brands. That might seem like a very broad scope, but our ultimate goal is to create a completely circular economy. We get one step closer with every apparel brand that wants to join the circular movement, and start selling Renewed apparel.   <br/><br/></p>
+<p>We also would like to expand our partnerships with influencer organizations. We currently are involved with <a href="https://www.connect-fashion.com/">Connect Fashion</a>, <a href="https://fashionforgood.com/">Fashion for Good</a>, and the <a href="https://www.ellenmacarthurfoundation.org/">Ellen McArthur Foundation</a>, and would welcome other similar organizations who are helping to influence the circular economy. </p>
+</div>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+</div>
+<div class="shrink-0 md:w-80">
+<nav aria-label="Tabs" class="flex-col hidden border divide-y rounded md:flex border-black/25 divide-black/25" role="tablist" x-bind:id="$id('tablist')">
+<template hidden="" x-for="(tab, index) in tabs">
+<button class="flex items-center justify-between px-6 py-3 font-semibold leading-normal uppercase text-18" role="tab" type="button" x-bind:aria-selected="isSelected(tab.id).toString()" x-bind:id="`tab-${tab.id}`" x-on:click="selectTab(tab.id)" x-on:mousedown.prevent="">
+<span class="truncate" x-text="tab.label"></span>
+<svg class="hidden ml-4 shrink-0" fill="currentColor" height="16" viewbox="0 0 55 16" width="55" x-bind:class="{'block': isSelected(tab.id), 'hidden': !isSelected(tab.id)}" xmlns="http://www.w3.org/2000/svg">
+<path d="M54.7071 8.7071C55.0976 8.31658 55.0976 7.68341 54.7071 7.29289L48.3431 0.92893C47.9526 0.538405 47.3195 0.538405 46.9289 0.92893C46.5384 1.31945 46.5384 1.95262 46.9289 2.34314L52.5858 8L46.9289 13.6569C46.5384 14.0474 46.5384 14.6805 46.9289 15.0711C47.3195 15.4616 47.9526 15.4616 48.3431 15.0711L54.7071 8.7071ZM1.44703e-07 9L54 9L54 7L-1.44703e-07 7L1.44703e-07 9Z"></path>
+</svg> </button>
+</template>
+</nav>
+<div class="h-1 bg-primary w-16 my-8"></div>
+<div class="solution-spotlight-wysiwyg">
+<h2>Stats</h2>
+<p>As of December 2018, The Renewal Workshop had saved more than 100,000 pounds of textiles from landfill and the equivalent energy of 17,009 light bulbs for a year.</p>
+<h2>Solver Team</h2>
+<p><strong>Organization Type:</strong><br/>For Profit</p>
+<p><strong>Headquarters:</strong><br/>Cascade Locks, OR, USA<br/></p>
+<p><strong>Stage:</strong><br/>Growth</p>
+<p><strong>Working in:</strong><br/>Netherlands, USA</p>
+<p><strong>Employees:</strong><br/>29</p><p><strong>Website:</strong><br/><a href="https://renewalworkshop.com/" target="_blank">https://renewalworkshop.com/</a><br/></p><br/>
+</div>
+<div class="space-y-2">
+<div class="text-20 font-semibold mb-1">Solution Team:</div>
+<div class="flex items-center space-x-2">
+<img alt="Nicole Bassett" class="rounded-full size-9" decoding="async" fetchpriority="low" loading="lazy" src="https://d3t35pgnsskh52.cloudfront.net/uploads%2F20523_Bassett.png" style=""/> <div class="text-18 leading-tighter">
+<span>Nicole Bassett</span><br/>
+<span class="text-14 text-gray-500">Co-Founder</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
